@@ -91,7 +91,7 @@ const AboutMe = () => {
             “विद्या ददाति विनयं, विनयाद् याति पात्रताम्।”
           </p>
           <p className="text-sm text-gray-500 mt-1">
-            *Knowledge brings humility, and from humility comes true worth.*
+            *Knowledge brings humility, and from humility comes true worth*
           </p>
         </div>
 
