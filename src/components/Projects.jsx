@@ -93,7 +93,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="self-center text-sm text-black bg-green-400 px-4 py-2 rounded hover:bg-green-300 transition"
                 >
-                  View Project →
+                View Project →
                 </a>
               </div>
             </div>
