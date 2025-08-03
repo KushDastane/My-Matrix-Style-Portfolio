@@ -48,7 +48,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center gap-3 cursor-pointer" onClick={scrollToTop}>
           <img src="/logo.png" alt="logo" className="w-9 h-9" />
-          <span className="text-xl font-mono font-semibold text-green-900 tracking-wide">
+          <span className="text-xl font-mono font-semibold text-green-900 tracking-wide select-none">
             KD_PORTFOLIO
           </span>
         </div>
