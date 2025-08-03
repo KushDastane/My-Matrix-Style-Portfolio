@@ -16,25 +16,25 @@ const projects = [
     title: "Diksha Foundation",
     tools: [SiReact, SiTailwindcss, SiFirebase, SiCloudflare],
     link: "https://www.vvcaringcentre.com/",
-    image: "src/assets/projects/vvcaring.jpeg",
+    image: "../../assets/projects/vvcaring.jpeg",
   },
   {
     title: "University Lost & Found",
     tools: [SiHtml5, SiCss3, SiJavascript, SiExpress],
     link: "https://retrievia-lost-found-system-for.onrender.com/",
-    image: "src/assets/projects/L&F.png",
+    image: "../../assets/projects/L&F.png",
   },
   {
     title: "WebAR (Augmented Reality) App",
     tools: [SiJavascript, SiPlaycanvas],
     link: "https://github.com/KushDastane/3D-Web-AR-Heart-Anatomy-.git",
-    image: "src/assets/projects/AR.png",
+    image: "../../assets/projects/AR.png",
   },
   {
     title: "Static YouTube Clone",
     tools: [SiHtml5, SiCss3, SiJavascript],
     link: "https://youtubefrontendclone.netlify.app/",
-    image: "src/assets/projects/yt.png",
+    image: "../../assets/projects/yt.png",
   },
 ];
 
