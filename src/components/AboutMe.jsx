@@ -19,7 +19,7 @@ const AboutMe = () => {
           {[...Array(30)].map((_, i) => {
             const angle = Math.random() * 2 * Math.PI;
             const radius = 132;
-            const x = radius * Math.cos(angle) + 144 -5;
+            const x = radius * Math.cos(angle) + 144 - 5;
             const y = radius * Math.sin(angle) + 144 - 10;
 
             const delay = Math.random() * 2;
@@ -96,10 +96,10 @@ const AboutMe = () => {
         </div>
 
         {/* Hobbies Section */}
-        <div className="mt-8 text-sm md:text-base text-gray-700">
+        <div className="mt-8 justify-center  text-sm md:text-base text-gray-700">
           <p className="font-semibold text-green-600 mb-2">Hobbies:</p>
-          <ul className="flex flex-wrap gap-4">
-            <li className="flex items-center gap-2">
+          <ul className="flex flex-wrap gap-4 justify-center md:justify-start">
+            <li className="flex items-center gap-2 ">
               <GiPianoKeys className="text-black" /> Casio
             </li>
             <li className="flex items-center gap-2">
