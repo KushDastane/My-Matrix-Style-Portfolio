@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-mono text-matrixGreen;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+::selection {
+  background: #baffba;
+  color: black;         
+}
+
+.glitch-text {
+  position: relative;
+  color: white;
+  animation: glitch 0.8s infinite;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 0 red, -2px 0 cyan;
+  }
+  20% {
+    text-shadow: -2px 0 red, 2px 0 cyan;
+  }
+  40% {
+    text-shadow: 2px 0 cyan, -2px 0 red;
+  }
+  60% {
+    text-shadow: -1px 0 red, 1px 0 cyan;
+  }
+  80% {
+    text-shadow: 1px 0 red, -1px 0 cyan;
+  }
+  100% {
+    text-shadow: 0 0 red, 0 0 cyan;
+  }
+}
+@keyframes matrixRipple {
+  0% {
+    transform: scale(0.6);
+    opacity: 1;
+    box-shadow: 0 0 8px 2px rgba(34, 197, 94, 0.7);
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+    box-shadow: 0 0 12px 4px rgba(34, 197, 94, 0);
+  }
+}
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes matrix-up {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-60px) scale(0.8);
+    opacity: 0;
+  }
+}
+
+.animate-matrix-up {
+  animation-name: matrix-up;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@layer components {
+  .active-link {
+  color: #17a66f !important;
+}
+
+}
