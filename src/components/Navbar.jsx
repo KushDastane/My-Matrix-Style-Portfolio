@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-scroll";
 import { FaBars, FaTimes, FaDownload } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { IoExitOutline } from "react-icons/io5";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,15 +39,17 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
-
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-300 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-3 cursor-pointer" onClick={scrollToTop}>
+        <div
+          className="flex items-center gap-3 cursor-pointer"
+          onClick={scrollToTop}
+        >
           <img src="/logo.png" alt="logo" className="w-9 h-9" />
           <span className="text-xl font-mono font-semibold text-green-900 tracking-wide select-none">
             KD_PORTFOLIO
@@ -135,7 +138,10 @@ const Navbar = () => {
           download
           className="block w-full text-center mt-2 px-4 py-2 bg-[#00ff9f] text-black rounded-md hover:bg-green-400 transition"
         >
-          Resume
+          <div className="flex justify-center gap-3">
+            <FaDownload className="text-xs mt-1.5" />
+            Resume
+          </div>
         </a>
 
         <button
@@ -145,7 +151,10 @@ const Navbar = () => {
           }}
           className="block w-full text-center mt-2 px-4 py-2 border border-red-600 text-red-600 rounded-md hover:bg-red-100 transition"
         >
-          Leave Matrix
+          <div className="flex justify-center gap-3">
+            <IoExitOutline className="mt-1"/>
+            Leave Matrix
+          </div>
         </button>
       </div>
     </nav>
