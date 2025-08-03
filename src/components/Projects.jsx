@@ -16,27 +16,28 @@ const projects = [
     title: "Diksha Foundation",
     tools: [SiReact, SiTailwindcss, SiFirebase, SiCloudflare],
     link: "https://www.vvcaringcentre.com/",
-    image: "../../assets/projects/vvcaring.jpeg",
+    image: "/projects/vvcaring.jpeg",
   },
   {
     title: "University Lost & Found",
     tools: [SiHtml5, SiCss3, SiJavascript, SiExpress],
     link: "https://retrievia-lost-found-system-for.onrender.com/",
-    image: "../../assets/projects/L&F.png",
+    image: "/projects/L&F.png",
   },
   {
     title: "WebAR (Augmented Reality) App",
     tools: [SiJavascript, SiPlaycanvas],
     link: "https://github.com/KushDastane/3D-Web-AR-Heart-Anatomy-.git",
-    image: "../../assets/projects/AR.png",
+    image: "/projects/AR.png",
   },
   {
     title: "Static YouTube Clone",
     tools: [SiHtml5, SiCss3, SiJavascript],
     link: "https://youtubefrontendclone.netlify.app/",
-    image: "../../assets/projects/yt.png",
+    image: "/projects/yt.png",
   },
 ];
+
 
 const Projects = () => {
   return (
@@ -93,7 +94,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="self-center text-sm text-black bg-green-400 px-4 py-2 rounded hover:bg-green-300 transition"
                 >
-                View Project →
+                  View Project →
                 </a>
               </div>
             </div>
