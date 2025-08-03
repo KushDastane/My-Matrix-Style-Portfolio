@@ -1,5 +1,6 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { FaMusic, FaPencilAlt } from "react-icons/fa";
 import { GiPianoKeys } from "react-icons/gi"; // for a better keyboard/piano icon
@@ -78,7 +79,7 @@ const AboutMe = () => {
           </div>
         </div>
 
-        <p className="text-xs md:text-lg leading-relaxed text-gray-700 mb-6">
+        <p className="text-xs md:text-lg leading-relaxed text-gray-700 mb-6 text-center md:text-justify">
           I'm not only a website developer who does conventional programming but
           also someone who loves to think creatively! Trying out new
           technologies, applying them in real projects is something that drives

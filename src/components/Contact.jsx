@@ -24,7 +24,7 @@ const Contact = () => {
         <h2 className="text-3xl font-semibold text-[#111] border-l-4 border-green-500 pl-4">
           Get in Touch
         </h2>
-        <p className="text-gray-600 max-w-md leading-relaxed">
+        <p className="text-gray-600 max-w-md leading-relaxed text-justify">
           I’m open to collaborations, freelance opportunities, or just a tech
           talk. Let’s connect on any of these platforms.
         </p>
