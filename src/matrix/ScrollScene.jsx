@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 import { MatrixRain } from "./MatrixRain";
 import { Typewriter } from "react-simple-typewriter";

@@ -11,20 +11,20 @@ const Footer = () => {
 
         <div className="flex space-x-4 mt-3 md:mt-0">
           <a
-            href="https://github.com/your-username"
+            href="https://github.com/KushDastane"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaGithub className="w-5 h-5 fill-gray-500 hover:fill-green-700 transition" />
           </a>
           <a
-            href="https://linkedin.com/in/your-username"
+            href="hwww.linkedin.com/in/kush-dastane"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaLinkedin className="w-5 h-5 fill-gray-500 hover:fill-green-700 transition" />
           </a>
-          <a href="mailto:your-email@example.com">
+          <a href="mailto:kushdastane69211@gmail.com">
             <FaEnvelope className="w-5 h-5 fill-gray-500 hover:fill-green-700 transition" />
           </a>
         </div>
