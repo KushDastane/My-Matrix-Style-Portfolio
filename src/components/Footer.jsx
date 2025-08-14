@@ -18,7 +18,7 @@ const Footer = () => {
             <FaGithub className="w-5 h-5 fill-gray-500 hover:fill-green-700 transition" />
           </a>
           <a
-            href="www.linkedin.com/in/kush-dastane/"
+            href="https://www.linkedin.com/in/kush-dastane/"
             target="_blank"
             rel="noopener noreferrer"
           >
