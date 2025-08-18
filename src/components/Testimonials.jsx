@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { FaStar, FaRegStar } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -6,7 +7,7 @@ const testimonials = [
   {
     name: "Mr. Yash Raut",
     text: "Kush developed a full website and admin panel for us, his professionalism and problem-solving abilities made a significant impact on our online presence.",
-    organization:"V.V. Caring Centre",
+    organization: "V.V. Caring Centre",
     stars: 5,
   },
 ];
@@ -17,7 +18,6 @@ const Testimonials = () => {
       id="testimonials"
       className="relative overflow-hidden py-20 px-6 bg-black text-green-300 font-mono"
     >
-      {/* Matrix-style dot grid */}
       <div className="absolute inset-0 bg-[radial-gradient(#00ff8877_0.5px,transparent_0.5px)] [background-size:18px_18px] opacity-20 z-0 pointer-events-none" />
 
       <div className="relative z-10 max-w-5xl mx-auto text-center">
@@ -35,7 +35,7 @@ const Testimonials = () => {
               viewport={{ once: true }}
               className="group relative text-center rounded-xl p-8 bg-[#0e1111]/60 backdrop-blur-md border border-green-800 shadow-md "
             >
-              {/* Top-center stars */}
+              {/* stars */}
               <div className="flex items-center justify-center gap-1 mb-5">
                 {Array.from({ length: 5 }).map((_, i) =>
                   i < item.stars ? (
@@ -46,7 +46,7 @@ const Testimonials = () => {
                 )}
               </div>
 
-              {/* Terminal-style text */}
+              {/* Terminal style text */}
               <p className="text-green-200 italic leading-relaxed mb-6 max-w-md mx-auto">
                 “{item.text}”
               </p>

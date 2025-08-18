@@ -95,7 +95,6 @@ const Skills = () => {
         ))}
       </div>
 
-      {/* Skills List as flex-wrap, not grid */}
       <div className="max-w-5xl mx-auto px-2">
         <div className="flex flex-wrap justify-center md:gap-8 gap-3">
           {skillCategories[activeTab].skills.map((skill, idx) => (

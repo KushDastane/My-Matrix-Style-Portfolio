@@ -50,7 +50,10 @@ const Navbar = () => {
           className="flex items-center gap-3 cursor-pointer"
           onClick={scrollToTop}
         >
-          <img src="/logo.png" alt="logo" className="w-9 h-9" />
+          <picture>
+            <source srcSet="/logo.webp" type="image/webp" />{" "}
+            <img src="/logo.png" alt="logo" className="w-9 h-9" />
+          </picture>
           <span className="text-xl font-mono font-semibold text-green-900 tracking-wide select-none">
             KD_PORTFOLIO
           </span>
@@ -152,7 +155,7 @@ const Navbar = () => {
           className="block w-full text-center mt-2 px-4 py-2 border border-red-600 text-red-600 rounded-md hover:bg-red-100 transition"
         >
           <div className="flex justify-center gap-3">
-            <IoExitOutline className="mt-1"/>
+            <IoExitOutline className="mt-1" />
             Leave Matrix
           </div>
         </button>

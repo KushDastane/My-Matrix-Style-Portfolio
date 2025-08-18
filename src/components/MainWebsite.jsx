@@ -15,17 +15,14 @@ const MainWebsite = () => {
       {/* About Me */}
       <AboutMe />
 
-      {/* Skills */}
       <Skills />
       <TransitionSection />
-      {/* Projects */}
       <Projects />
       <TransitionSection
         nextLabel="Experience"
         command='"Initializing timeline..."'
         status="Awaiting user scroll"
       />
-      {/* Experience */}
       <Experience />
       <TransitionSection
         nextLabel="Client Reviews"
@@ -33,7 +30,7 @@ const MainWebsite = () => {
         status="Ratings Initialized..."
       />
       <Testimonials />
-      <Contact/>
+      <Contact />
     </div>
   );
 };

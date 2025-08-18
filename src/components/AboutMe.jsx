@@ -3,7 +3,7 @@ import { Typewriter } from "react-simple-typewriter";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { FaMusic, FaPencilAlt } from "react-icons/fa";
-import { GiPianoKeys } from "react-icons/gi"; // for a better keyboard/piano icon
+import { GiPianoKeys } from "react-icons/gi";
 
 const matrixSymbols = ["0", "1", "Ж", "Ψ", "¥", "Σ", "λ", "中"];
 
@@ -13,9 +13,9 @@ const AboutMe = () => {
       id="about"
       className="flex flex-col md:flex-row items-center justify-center px-6 py-20 bg-[#f9f9f9] text-gray-800 relative"
     >
-      {/* Profile Image with Matrix Rising Symbols */}
+      {/* Profile Image*/}
       <div className="relative w-72 h-72 mb-8 md:mb-0 md:mr-10">
-        {/* Floating matrix symbols rising from border of image */}
+        {/* Floating matrix symbols effect */}
         <div className="absolute inset-0 z-10 pointer-events-none">
           {[...Array(30)].map((_, i) => {
             const angle = Math.random() * 2 * Math.PI;
@@ -45,17 +45,22 @@ const AboutMe = () => {
           })}
         </div>
 
-        <motion.img
+        <motion.picture
           initial={{ scale: 0.95, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.6 }}
-          src="/kush.png"
-          alt="Kush Dastane"
           className="w-72 h-72 rounded-full object-cover  relative z-20"
-        />
+        >
+          <source srcSet="/kush.webp" type="image/webp" />
+          <img
+            src="/kush.png"
+            alt="Kush Dastane"
+            className="w-72 h-72 rounded-full object-cover"
+          />
+        </motion.picture>
       </div>
 
-      {/* Text Content */}
+      {/* Text */}
       <motion.div
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

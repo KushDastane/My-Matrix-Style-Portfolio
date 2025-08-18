@@ -15,7 +15,7 @@ const Contact = () => {
       id="contact"
       className="max-w-7xl mx-auto  px-6 py-20 flex flex-col md:flex-row items-start justify-center md:gap-20 gap-10"
     >
-      {/* Left - Social Handles */}
+      {/* Social Handles */}
       <motion.div
         className="flex flex-col gap-6 md:w-1/2"
         initial={{ opacity: 0, x: -50 }}
@@ -63,7 +63,7 @@ const Contact = () => {
         </div>
       </motion.div>
 
-      {/* Right - Contact Form */}
+      {/*Contact Form */}
       <motion.div
         className="bg-gray-300 p-8 rounded-xl shadow-md md:w-1/2 w-full"
         initial={{ opacity: 0, x: 20 }}
