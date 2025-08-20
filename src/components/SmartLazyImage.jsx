@@ -14,11 +14,15 @@ const SmartLazyImage = ({
 
   const cleanPath = (p) => (p && !p.startsWith("/") ? `/${p}` : p);
 
-  const placeholder =
-    result[cleanPath(finalSrc)] ||
-    result[cleanPath(`${base}.webp`)] ||
-    result[cleanPath(`${base}.jpg`)] ||
-    result[cleanPath(`${base}.png`)] ||
+  // Get blur base64 from JSON
+  const blurURL =
+    (result[cleanPath(finalSrc)] && result[cleanPath(finalSrc)].blurDataURL) ||
+    (result[cleanPath(`${base}.webp`)] &&
+      result[cleanPath(`${base}.webp`)].blurDataURL) ||
+    (result[cleanPath(`${base}.jpg`)] &&
+      result[cleanPath(`${base}.jpg`)].blurDataURL) ||
+    (result[cleanPath(`${base}.png`)] &&
+      result[cleanPath(`${base}.png`)].blurDataURL) ||
     "";
 
   const [loaded, setLoaded] = useState(false);
@@ -27,14 +31,14 @@ const SmartLazyImage = ({
     <div
       className={`relative overflow-hidden ${className}`}
       style={{
-        backgroundImage: `url(${placeholder})`,
+        backgroundImage: `url(${blurURL})`, // ✅ Show blur immediately
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         ...(className.includes("h-") ? {} : { minHeight: "200px" }),
       }}
     >
-      {/* 💡 Overlay a soft blur on top of background */}
+      {/* Optional: soft overlay blur */}
       {!loaded && (
         <div className="absolute inset-0 backdrop-blur-md bg-white/10 z-0" />
       )}
@@ -46,7 +50,7 @@ const SmartLazyImage = ({
           loading={loading}
           fetchpriority={fetchpriority}
           onLoad={() => setLoaded(true)}
-          className={`w-full h-full object-cover ${
+          className={`w-full h-full object-cover transition-opacity duration-500 ${
             loaded ? "opacity-100" : "opacity-0"
           }`}
           {...rest}
