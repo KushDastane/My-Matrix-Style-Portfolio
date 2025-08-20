@@ -10,31 +10,32 @@ import {
   SiExpress,
   SiCloudflare,
 } from "react-icons/si";
+import SmartLazyImage from "./SmartLazyImage";
 
 const projects = [
   {
     title: "Diksha Foundation",
     tools: [SiReact, SiTailwindcss, SiFirebase, SiCloudflare],
     link: "https://www.vvcaringcentre.com/",
-    image: "/projects/vvcaring.jpeg",
+    image: "/projects/vvcaring.webp",
   },
   {
     title: "University Lost & Found",
     tools: [SiHtml5, SiCss3, SiJavascript, SiExpress],
     link: "https://retrievia-lost-found-system-for.onrender.com/",
-    image: "/projects/L&F.png",
+    image: "/projects/L&F.webp",
   },
   {
     title: "WebAR (Augmented Reality) App",
     tools: [SiJavascript, SiPlaycanvas],
     link: "https://github.com/KushDastane/3D-Web-AR-Heart-Anatomy-.git",
-    image: "/projects/AR.png",
+    image: "/projects/AR.webp",
   },
   {
     title: "Static YouTube Clone",
     tools: [SiHtml5, SiCss3, SiJavascript],
     link: "https://youtubefrontendclone.netlify.app/",
-    image: "/projects/yt.png",
+    image: "/projects/yt.webp",
   },
 ];
 

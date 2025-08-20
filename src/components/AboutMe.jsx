@@ -2,8 +2,9 @@ import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import { FaMusic, FaPencilAlt } from "react-icons/fa";
+import { FaPencilAlt } from "react-icons/fa";
 import { GiPianoKeys } from "react-icons/gi";
+import SmartLazyImage from "./SmartLazyImage";
 
 const matrixSymbols = ["0", "1", "Ж", "Ψ", "¥", "Σ", "λ", "中"];
 
@@ -13,7 +14,7 @@ const AboutMe = () => {
       id="about"
       className="flex flex-col md:flex-row items-center justify-center px-6 py-20 bg-[#f9f9f9] text-gray-800 relative"
     >
-      {/* Profile Image*/}
+      {/* Profile Image */}
       <div className="relative w-72 h-72 mb-8 md:mb-0 md:mr-10">
         {/* Floating matrix symbols effect */}
         <div className="absolute inset-0 z-10 pointer-events-none">
@@ -45,22 +46,23 @@ const AboutMe = () => {
           })}
         </div>
 
-        <motion.picture
-          initial={{ scale: 0.95, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          className="w-72 h-72 rounded-full object-cover  relative z-20"
-        >
-          <source srcSet="/kush.webp" type="image/webp" />
+        {/* No animation wrapper for image */}
+        <div className="relative z-20 w-72 h-72 rounded-full overflow-hidden">
           <img
-            src="/kush.png"
+            src="/kush.webp" // fallback blur
             alt="Kush Dastane"
-            className="w-72 h-72 rounded-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover"
           />
-        </motion.picture>
+          <SmartLazyImage
+            src={"/kush.webp"}
+            alt="Kush Dastane"
+            className="w-full h-full object-cover rounded-full"
+            fetchpriority={"high"}
+          />
+        </div>
       </div>
 
-      {/* Text */}
+      {/* Text (animated) */}
       <motion.div
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -102,10 +104,10 @@ const AboutMe = () => {
         </div>
 
         {/* Hobbies Section */}
-        <div className="mt-8 justify-center  text-sm md:text-base text-gray-700">
+        <div className="mt-8 justify-center text-sm md:text-base text-gray-700">
           <p className="font-semibold text-green-600 mb-2">Hobbies:</p>
           <ul className="flex flex-wrap gap-4 justify-center md:justify-start">
-            <li className="flex items-center gap-2 ">
+            <li className="flex items-center gap-2">
               <GiPianoKeys className="text-black" /> Casio
             </li>
             <li className="flex items-center gap-2">
