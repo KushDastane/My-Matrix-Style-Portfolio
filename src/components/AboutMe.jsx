@@ -1,6 +1,6 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
-// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { FaPencilAlt } from "react-icons/fa";
 import { GiPianoKeys } from "react-icons/gi";
@@ -15,7 +15,12 @@ const AboutMe = () => {
       className="flex flex-col md:flex-row items-center justify-center px-6 py-20 bg-[#f9f9f9] text-gray-800 relative"
     >
       {/* Profile Image */}
-      <div className="relative w-72 h-72 mb-8 md:mb-0 md:mr-10">
+      <motion.div
+        initial={{ scale: 0.9 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="relative w-72 h-72 mb-8 md:mb-0 md:mr-10"
+      >
         {/* Floating matrix symbols effect */}
         <div className="absolute inset-0 z-10 pointer-events-none">
           {[...Array(30)].map((_, i) => {
@@ -46,13 +51,15 @@ const AboutMe = () => {
           })}
         </div>
 
-        {/* No animation wrapper for image */}
+        {/* Image wrapper */}
         <div className="relative z-20 w-72 h-72 rounded-full overflow-hidden">
+          {/* Placeholder blur (instant) */}
           <img
-            src="/kush.webp" // fallback blur
+            src="/kush.webp"
             alt="Kush Dastane"
             className="absolute inset-0 w-full h-full object-cover"
           />
+          {/* Lazy image */}
           <SmartLazyImage
             src={"/kush.webp"}
             alt="Kush Dastane"
@@ -60,9 +67,9 @@ const AboutMe = () => {
             fetchpriority={"high"}
           />
         </div>
-      </div>
+      </motion.div>
 
-      {/* Text (animated) */}
+      {/* Text (animated separately) */}
       <motion.div
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
