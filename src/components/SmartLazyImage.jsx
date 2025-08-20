@@ -12,9 +12,10 @@ const SmartLazyImage = ({
 }) => {
   const finalSrc = src || `${base}.webp`;
 
-  const cleanPath = (p) => (p && !p.startsWith("/") ? `/${p}` : p);
+  // ✅ Keep only filename for JSON lookup, ignore folder paths
+  const cleanPath = (p) => (p ? p.split("/").pop() : "");
 
-  // Get blur base64 from JSON
+  // Lookup blurDataURL in JSON
   const blurURL =
     (result[cleanPath(finalSrc)] && result[cleanPath(finalSrc)].blurDataURL) ||
     (result[cleanPath(`${base}.webp`)] &&
@@ -31,14 +32,14 @@ const SmartLazyImage = ({
     <div
       className={`relative overflow-hidden ${className}`}
       style={{
-        backgroundImage: `url(${blurURL})`, // ✅ Show blur immediately
+        backgroundImage: `url(${blurURL})`, // Show blur immediately
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         ...(className.includes("h-") ? {} : { minHeight: "200px" }),
       }}
     >
-      {/* Optional: soft overlay blur */}
+      {/* Optional overlay blur until full image loads */}
       {!loaded && (
         <div className="absolute inset-0 backdrop-blur-md bg-white/10 z-0" />
       )}
@@ -48,7 +49,7 @@ const SmartLazyImage = ({
           src={finalSrc}
           alt={alt}
           loading={loading}
-          fetchpriority={fetchpriority}
+          fetchPriority={fetchpriority}
           onLoad={() => setLoaded(true)}
           className={`w-full h-full object-cover transition-opacity duration-500 ${
             loaded ? "opacity-100" : "opacity-0"
