@@ -58,7 +58,7 @@ const Projects = () => {
                 fetchpriority="high"
               />
               {/* Terminal Bar */}
-              <div className="flex items-center justify-between px-3 py-2 bg-green-900/20 border-b border-green-700">
+              <div className="flex items-center justify-between px-4 py-2 bg-green-900/20 border-b border-green-700">
                 <div className="flex space-x-2">
                   <span className="w-3 h-3 bg-red-500 rounded-full" />
                   <span className="w-3 h-3 bg-yellow-500 rounded-full" />
