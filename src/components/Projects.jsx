@@ -31,12 +31,6 @@ const projects = [
     link: "https://github.com/KushDastane/3D-Web-AR-Heart-Anatomy-.git",
     image: "/projects/AR.webp",
   },
-  {
-    title: "Static YouTube Clone",
-    tools: [SiHtml5, SiCss3, SiJavascript],
-    link: "https://youtubefrontendclone.netlify.app/",
-    image: "/projects/yt.webp",
-  },
 ];
 
 const Projects = () => {
@@ -47,10 +41,10 @@ const Projects = () => {
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl sm:text-4xl text-center font-bold mb-16 glitch-text">
-          ./MyProjects
+          ./MajorProjects
         </h2>
 
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
