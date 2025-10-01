@@ -38,7 +38,7 @@ const handleRedPill = () => {
         .play()
         .catch((err) => console.warn("Whoosh sound failed:", err));
     }
-  }, 1200); // Play ~1.2s after red pill click (tweak this as needed)
+  }, 1200); 
 
   // Start Matrix animation chain
   setTimeout(() => {
