@@ -147,7 +147,7 @@ const handleRedPill = () => {
                       whileTap={{ scale: 0.9 }}
                       className="backdrop-blur-sm bg-red-600/40 hover:bg-red-500/40 px-8 py-3 rounded-full text-white text-sm tracking-widest z-10"
                     >
-                      Enter the Matrix
+                      Enter inside
                     </motion.button>
                   ) : (
                     <div className="relative w-[150px] h-[40px] flex flex-wrap justify-center items-center">
