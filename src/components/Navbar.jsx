@@ -51,11 +51,11 @@ const Navbar = () => {
           onClick={scrollToTop}
         >
           <picture>
-            <source srcSet="/logo.webp" type="image/webp" />{" "}
-            <img src="/logo.png" alt="logo" className="w-9 h-9" />
+            <source srcSet="/kush.webp" type="image/webp" />{" "}
+            <img src="/kush.png" alt="logo" className="w-11 h-11 rounded-full object-cover" />
           </picture>
           <span className="text-xl font-mono font-semibold text-green-900 tracking-wide select-none">
-            KD_PORTFOLIO
+            KUSH DASTANE
           </span>
         </div>
 
